@@ -29,7 +29,7 @@ const Hero = () => {
           <TextGenerateEffect
             duration={2}
             filter={false}
-            title={"Transforming Concepts into Seamless User Experiences"}
+            words={"Transforming Concepts into Seamless User Experiences"}
             className="text-center text-[40px] sm:text-xl sm:tracking-tighter lg:leading-none md:text-5xl lg:text-6xl sm:leading-none"
           />
           <p className="text-center md:tracking-wide my-4 text-xs md:text-lg lg:text-xl">
