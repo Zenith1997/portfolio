@@ -4,18 +4,18 @@ import { motion, stagger, useAnimate } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export const TextGenerateEffect = ({
-  words,
+  title,
   className,
   filter = true,
   duration = 0.5,
 }: {
-  words: string;
+  title: string;
   className?: string;
   filter?: boolean;
   duration?: number;
 }) => {
   const [scope, animate] = useAnimate();
-  let wordsArray = words.split(" ");
+  let titleArray = title.split("");
   useEffect(() => {
     animate(
       "span",
@@ -24,25 +24,25 @@ export const TextGenerateEffect = ({
         filter: filter ? "blur(0px)" : "none",
       },
       {
-        duration: duration ? duration : 1,
-        delay: stagger(0.2),
+        duration: duration ? duration : .5,
+        delay: stagger(0.045),
       }
     );
   }, [scope.current]);
 
-  const renderWords = () => {
+  const rendertitle = () => {
     return (
       <motion.div ref={scope}>
-        {wordsArray.map((word, idx) => {
+        {titleArray.map((word, idx) => {
           return (
             <motion.span
               key={word + idx}
-              className="dark:text-purple text-black opacity-0"
+              className=" opacity-0"
               style={{
                 filter: filter ? "blur(10px)" : "none",
               }}
             >
-              {word}{" "}
+              {word}{""}
             </motion.span>
           );
         })}
@@ -53,8 +53,8 @@ export const TextGenerateEffect = ({
   return (
     <div className={cn("font-bold", className)}>
       <div className="mt-4">
-        <div className=" dark:text-purple text-black text-6xl leading-snug tracking-wide">
-          {renderWords()}
+      <div className="text-6xl leading-loose tracking-wider bg-gradient-to-r from-purple via-blue-500 bg-clip-text text-transparent dark:from-blue-500 dark:via-white dark:to-purple">
+      {rendertitle()}
         </div>
       </div>
     </div>
