@@ -5,17 +5,19 @@ import { cn } from "@/lib/utils";
 
 export const TextGenerateEffect = ({
   title,
+  description,
   className,
   filter = true,
   duration = 0.5,
 }: {
   title: string;
+  description?: string;
   className?: string;
   filter?: boolean;
   duration?: number;
 }) => {
   const [scope, animate] = useAnimate();
-  let titleArray = title.split("");
+  let titleArray = (title||description).split("");
   useEffect(() => {
     animate(
       "span",

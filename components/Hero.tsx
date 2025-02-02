@@ -30,7 +30,9 @@ const Hero = () => {
           
          
       <TextGenerateEffect duration={2} filter={false} title={"Transforming Concepts into Seamless Experiences"} className="text-center text-[40px] sm:text-sm md:text-5xl lg:text-6xl"/>
-      <p className="text-center md:tracking-wider my-4 text-sm md:text-lg lg:text-xl">Hi, I&apos;m Zenith, a Next.js Developer based in Sri Lanka.</p>
+      <p className="text-center md:tracking-wider my-4 text-sm md:text-lg lg:text-xl">
+        
+        Hi, I&apos;m Zenith, a Next.js Developer based in Sri Lanka.</p>
       
       <MagicButton title ="Show my work" icon={""} otherClasses="" position="" handleClick={()=>{}}></MagicButton>
         </div>
