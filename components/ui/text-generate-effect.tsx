@@ -55,7 +55,7 @@ export const TextGenerateEffect = ({
   return (
     <div className={cn("font-bold", className)}>
       <div className="mt-4">
-      <div className="text-6xl leading-loose tracking-wider bg-gradient-to-r from-purple via-blue-500 bg-clip-text text-transparent dark:from-blue-500 dark:via-white dark:to-purple">
+      <div className={` bg-gradient-to-br from-purple via-blue-500 bg-clip-text text-transparent dark:from-purple dark:via-green-200 dark:to-white ${className}`}>
       {rendertitle()}
         </div>
       </div>
